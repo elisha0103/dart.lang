@@ -8,6 +8,7 @@ void main() {
   calculate(4).listen((val) {
     print('calculate(1) : $val');
   });
+  // 두개 calculate가 동시 실행되고 다음에 1초 기다리게 됨 : async 프로그램
 }
 
 Stream<int> calculate(int number) async* {
